@@ -2,17 +2,13 @@ body {
   background-color: rgb(151, 211, 143);
   color: #333;
   margin: 0 auto;
-  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
-  width: 60%;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+  width: 70%;
 }
 
 header {
   margin-bottom: 20px;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 header nav {
@@ -20,6 +16,7 @@ header nav {
   padding: .5em;
   top: 0; 
   position: sticky;
+  border-radius: 10px;
 }
 
 header nav ul {
@@ -37,18 +34,24 @@ header nav a {
 }
 
 .photos {
-  margin: 0;
-  padding: 0;
-  display: block;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
 }
 
-/*ställ in den här ordentligt*/
+.photos img {
+  max-width: 150px;
+}
+
+/*ställ in den här ordentligt om den nu ska användas någonstans?*/
 .flex-container {
   display: flex;
 }
 
-aside {
-  width: 200px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-gap: 20px;
 }
 
 .aside-nav {
@@ -75,18 +78,18 @@ aside {
 }
 
 .aside-nav a:hover:not(.active) {
-background-color: #555;
-color: white;
+  background-color: #555;
+  color: white;
 }
 
-article {
-  width: 500px;
-  margin: 0 40px;
-}
+
+/*Gallery section*/
 
 #gallery {
-  background-color: #ffc200;
+  background-color: rgb(18, 85, 24);
+  color: white;
   text-align: center;
+  padding-top: 10px;
 }
 
 .spacer {
@@ -95,7 +98,7 @@ article {
 }
 
 .cards {
-  background-color: #ffc200;
+  background-color:rgb(18, 85, 24);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
